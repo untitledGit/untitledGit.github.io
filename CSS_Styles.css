@@ -22,6 +22,7 @@ body {
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-position: center; /* Center the image */
     min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+    background-attachment: fixed; /* This makes the background stay fixed */
 }
 
 /* Headings styling */
@@ -154,7 +155,12 @@ h1:hover, h2:hover {
 #instagramButtonContainer {
     margin-top: 50px; /* Add margin to move the button down */
 }
+#video-container {
 
+    bottom: 30px;
+    right: 250px;
+    z-index: 9999;
+}
 /* Navigation Bar Styling */
 #navbar {
     background-color: #333; /* Dark background */
@@ -309,7 +315,8 @@ footer {
 /* Adjustment to move Instagram embed higher */
 #instagramEmbedContainer {
     margin-top: -150px;
-    margin-bottom: 200px;
+    margin-left: 150px;
+    
 }
 
 /* Search bar styling */
