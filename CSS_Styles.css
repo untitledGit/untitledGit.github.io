@@ -309,6 +309,7 @@ footer {
 /* Adjustment to move Instagram embed higher */
 #instagramEmbedContainer {
     margin-top: -150px;
+    margin-bottom: 200px;
 }
 
 /* Search bar styling */
