@@ -157,7 +157,7 @@ h1:hover, h2:hover {
 }
 
 #video-container {
-    position: absolute; /* Position relative to the nearest positioned ancestor */
+    
     bottom: 20px; /* 100px margin from the bottom */
     right: -50px; /* 100px margin from the right */
     z-index: 9999; /* Ensure it stays on top of other elements */
