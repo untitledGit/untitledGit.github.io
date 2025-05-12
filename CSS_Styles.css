@@ -155,12 +155,14 @@ h1:hover, h2:hover {
 #instagramButtonContainer {
     margin-top: 50px; /* Add margin to move the button down */
 }
-#video-container {
 
-    bottom: 30px;
-    right: 250px;
-    z-index: 9999;
+#video-container {
+    position: absolute; /* Position relative to the nearest positioned ancestor */
+    bottom: 20px; /* 100px margin from the bottom */
+    right: 200px; /* 100px margin from the right */
+    z-index: 9999; /* Ensure it stays on top of other elements */
 }
+
 /* Navigation Bar Styling */
 #navbar {
     background-color: #333; /* Dark background */
