@@ -316,9 +316,15 @@ footer {
 
 /* Adjustment to move Instagram embed higher */
 #instagramEmbedContainer {
-    margin-top: -150px;
-    margin-left: 150px;
-    
+  max-width: 100%; /* Ensure it doesn't exceed the width of the webpage */
+  margin: 0 auto; /* Center the container horizontally */
+  overflow: hidden; /* Prevent content from overflowing */
+  box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+.instagram-media {
+  max-width: 100%; /* Ensure the embed scales within the container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Search bar styling */
