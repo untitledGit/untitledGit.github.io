@@ -4,39 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Page</title>
-    <link rel="stylesheet" href="budget.css">
-</head>
-<body>
-    <header>
-        <!DOCTYPE html>
-<html>
-<body>
-
-<iframe width="420" height="345" src="https://www.youtube.com/embed/Gf4j-x-WfGM?autoplay=1&mute=1">
-</iframe>
-
-</body>
-</html>
-
-
-    </header>
-    <main>
-        
-    </main>
-    <footer>
-        
-    </footer>
+    <link rel="stylesheet" href="budget.css"> <!-- Ensure this path is correct -->
     <style>
         html, body {
             height: 100%; /* Ensure both html and body take up the full height */
             margin: 0; /* Remove default margin */
         }
         body {
-            background-image: url('bg.jpg'); 
+            background-image: url('budget_images/bg.jpg'); /* Corrected path for background image */
             background-size: cover; 
             background-repeat: no-repeat; 
             background-position: center; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; /* Center content vertically and horizontally */
+            font-family: Arial, sans-serif;
+        }
+        .v-shape-container {
+            position: relative;
+            width: 80%; /* Adjust width to cover most of the page */
+            height: 80%; /* Adjust height to cover most of the page */
+        }
+        .v-shape-container img {
+            position: absolute;
+            width: 30%; /* Each image takes 30% of the container width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Optional: Add rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+        }
+        .v-shape-container .top {
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0); /* Center the top image horizontally */
+        }
+        .v-shape-container .left {
+            bottom: 0;
+            left: 10%; /* Position the left image */
+            transform: rotate(-15deg); /* Slight rotation for V-shape */
+        }
+        .v-shape-container .right {
+            bottom: 0;
+            right: 10%; /* Position the right image */
+            transform: rotate(15deg); /* Slight rotation for V-shape */
+        }
+        .textbox {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 16px;
+            width: 200px;
+            text-align: center;
+        }
+        .textbox.top-left {
+            top: 150px; /* Add margin from the top */
+            left: 200px; /* Add margin from the left */
+        }
+        .textbox.top-right {
+            top: 150px; /* Add margin from the top */
+            right: 200px; /* Add margin from the right */
+        }
+        /* Top navigation bar styles */
+        #navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: center; /* Center the navigation items */
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        #navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px; /* Add spacing between menu items */
+        }
+
+        #navbar ul li {
+            display: inline;
+        }
+
+        #navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        #navbar ul li a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* Search bar styles */
+        #searchForm {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: absolute;
+            right: 20px; /* Keep the search bar on the right */
+        }
+
+        #searchInput {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        #searchButton {
+            padding: 5px 10px;
+            background-color: #3897f0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        #searchButton:hover {
+            background-color: #287bc0;
         }
     </style>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#order">Order</a></li>
+            <li><a href="#social-media">Social Media</a></li>
+            <li><a href="#products-services">Products and Services</a></li>
+        </ul>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button id="searchButton" type="button">Search</button>
+        </form>
+    </nav>
+    <div class="v-shape-container">
+        <img src="budget_images/budget1.jpg" alt="Budget 1" class="top">
+        <img src="budget_images/budget2.jpg" alt="Budget 2" class="left">
+        <img src="budget_images/budget3.jpg" alt="Budget 3" class="right">
+    </div>
+    <div class="textbox top-left">
+        <h3>Top Left</h3>
+        <p>This is the top-left textbox.</p>
+    </div>
+    <div class="textbox top-right">
+        <h3>Top Right</h3>
+        <p>This is the top-right textbox.</p>
+    </div>
+
+    <!-- Link the budget.js file -->
+    <script src="budget.js"></script>
 </body>
 </html>
